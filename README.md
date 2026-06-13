@@ -33,7 +33,6 @@ Java | JSP | Servlets | JDBC | MySQL | Apache Tomcat
 
 - Cadastro de livros  
 - Listagem de livros  
-- Edição de registros  
 - Exclusão de registros  
 
 ---
@@ -43,7 +42,8 @@ Java | JSP | Servlets | JDBC | MySQL | Apache Tomcat
 - Centralização da conexão com banco via ConnectionFactory  
 - Separação de responsabilidades seguindo padrão MVC simplificado  
 - Validação de dados no backend  
-- Estrutura preparada para evolução para frameworks Java modernos (ex: Spring)  
+- Implementação de mecanismo básico de controle de requisições (Rate Limit simples em nível de aplicação)
+- Cuidados na validação e sanitização de dados na inserção para reduzir entradas inválidas  
 
 ---
 
@@ -89,3 +89,6 @@ Projeto acadêmico para consolidação de fundamentos em:
 
 ### Exclusão de livros
 ![Exclusão](assets/images/excluir.png)
+
+
+@michellestrey
