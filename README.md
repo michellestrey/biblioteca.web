@@ -1,51 +1,79 @@
-# Sistema de Biblioteca Web
+# 📚 Sistema de Biblioteca Web
 
-Projeto acadêmico desenvolvido para fins de avaliação na faculdade. Consiste em um sistema legado em Java Web para gerenciamento e listagem de livros.
+Sistema web CRUD desenvolvido em Java para gerenciamento de livros, utilizando arquitetura MVC simplificada com JSP/Servlets e persistência em banco de dados relacional via JDBC.
 
-## Tecnologias
-- Java
-- Apache Tomcat
-- MySQL
+---
 
-## Como Rodar o Projeto
+## 🧰 Stack Técnica
 
-1. Crie um banco de dados MySQL chamado `biblioteca`.
-2. Como a configuração de conexão foi ocultada por segurança, crie manualmente o arquivo `ConnectionFactory.java` no caminho `src/main/java/biblioteca/web/config/` com o seguinte código:
+Java | JSP | Servlets | JDBC | MySQL | Apache Tomcat
 
-```java
-package biblioteca.web.config;
+---
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+## 💼 Resumo Técnico
 
-public class ConnectionFactory {
-    private static final String URL = "jdbc:mysql://localhost:3306/biblioteca";
-    private static final String USER = "seu_usuario";
-    private static final String PASS = "sua_senha";
+- Desenvolvimento de aplicação web Java utilizando arquitetura MVC simplificada  
+- Implementação de operações CRUD completas (Create, Read, Update, Delete)  
+- Integração com banco de dados relacional MySQL via JDBC  
+- Estruturação em camadas (View, Controller, DAO)  
+- Deploy em servidor Apache Tomcat  
 
-    public static Connection getConnection() throws SQLException {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Driver MySQL não encontrado", e);
-        }
-        return DriverManager.getConnection(URL, USER, PASS);
-    }
+---
 
-    public static void main(String[] args) {
-        try {
-            Connection con = ConnectionFactory.getConnection();
-            if (con != null) {
-                System.out.println("SUCESSO: Conexão com o banco realizada!");
-                con.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
+## 🏗️ Arquitetura
 
-3. Execute o método main da classe criada para testar a conexão local com o seu banco de dados.
-4. Execute o projeto em um servidor Apache Tomcat através da IDE para acessar a interface web.
+- View: JSP (interface do usuário)  
+- Controller: Servlets (controle de requisições e regras de fluxo)  
+- DAO: JDBC para acesso a dados  
+- Database: MySQL  
+
+---
+
+## ⚙️ Funcionalidades
+
+- Cadastro de livros  
+- Listagem de livros  
+- Edição de registros  
+- Exclusão de registros  
+
+---
+
+## 🔐 Implementações técnicas
+
+- Centralização da conexão com banco via ConnectionFactory  
+- Separação de responsabilidades seguindo padrão MVC simplificado  
+- Validação de dados no backend  
+- Estrutura preparada para evolução para frameworks Java modernos (ex: Spring)  
+
+---
+
+## 🖥️ Front-end
+
+Interface desenvolvida com JSP.  
+
+Parte do layout e ajustes de interface foram auxiliados com ferramenta de geração de UI (Lovable).
+
+---
+
+## ⚠️ Limitações técnicas (contexto acadêmico)
+
+- Sem autenticação de usuários  
+- Sem controle de autorização (roles/perfis)  
+- Sem mecanismos avançados de segurança web (CSRF/XSS hardening)  
+- Sem rate limiting ou controle de tráfego  
+- Não projetado para ambiente de produção  
+
+---
+
+## 🎯 Objetivo do projeto
+
+Projeto acadêmico para consolidação de fundamentos em:
+
+- Java Web (Servlets e JSP)  
+- Desenvolvimento backend com arquitetura MVC  
+- Integração com banco de dados relacional  
+- Construção de aplicações CRUD  
+
+---
+
+## 📷 Interface
