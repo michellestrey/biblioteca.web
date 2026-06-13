@@ -33,7 +33,7 @@
     <div class="feature-card">
       <div class="feature-icon">⚡</div>
       <h3>Gestão Eficiente</h3>
-      <p>Liste, edite e exclua registros com poucos cliques numa interface moderna.</p>
+      <p>Liste e exclua registros com poucos cliques numa interface moderna.</p>
     </div>
   </div>
 </div>
