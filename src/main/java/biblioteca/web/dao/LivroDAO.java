@@ -13,7 +13,7 @@ import biblioteca.web.model.Livro;
 public class LivroDAO {
 
     public void salvar(Livro livro) {
-    	// AQUI EU BATI CABEÇA KKKKK A TABELA TEM QUE SER EXATAMENTE IGUAL AO BANCO CRIADO!
+  
     	String sql = "INSERT INTO livro " +
                 "(titulo, autor, anoPublicacao, isbn) " +
                 "VALUES (?, ?, ?, ?)";
