@@ -14,7 +14,7 @@ import biblioteca.web.service.LivroService;
 
 
 @WebServlet("/livros")
-public class LivroController extends HttpServlet {
+public class LivroController extends HttpServlet { 
 
 
     private LivroService service = new LivroService();
